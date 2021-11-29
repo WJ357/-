@@ -59,6 +59,17 @@ class ProductController extends Controller
      *
      * @return response()
      */
+    public function show(Product $product)
+    {
+        return view('Product/show', ['Product' => $product]);
+    }
+
+
+    /**
+     *
+     *
+     * @return response()
+     */
     public function update(Request $request)
     {
         if($request->id && $request->quantity){
